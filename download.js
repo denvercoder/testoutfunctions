@@ -1,18 +1,14 @@
-(function () {
-
-  const baseUrl = 'https://api.frontendmasters.com/v1/kabuki/courses/';
-  let courseName = 'react';
-  const url = baseUrl + courseName;
+;(function() {
+  const baseUrl = 'https://api.frontendmasters.com/v1/kabuki/courses/'
+  let courseName = 'react'
+  const url = baseUrl + courseName
 
   fetch(url)
-    .then((response) => response.json())
-    .then(function(data){
-      let sourceUrls = data.sourseBase;
-
-        return sourceUrls.map(function(sourceUrl){
-          console.log(sourceUrl);
-        })
-
+    .then(response => response.json())
+    .then(function(data) {
+      let sourceUrls = data.sourseBase
+      return sourceUrls.map(function(sourceUrl) {
+        console.log(sourceUrl)
+      })
     })
-
-})();
+})()
